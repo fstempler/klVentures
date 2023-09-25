@@ -1,0 +1,270 @@
+
+
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 15;
+}
+
+.popup.open {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 450px;    
+    height: 100vh;
+}
+
+
+
+.close__Btn{
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+
+.grid__Form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    border-radius: 10px;    
+    }
+    
+.colIzq { 
+    grid-area: 1 / 1 / 2 / 2; 
+    background-color: #59DF4E;    
+    display: flex;
+    width: 100%;      
+}
+
+.form__Img{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;    
+}
+
+.form__Img img{
+    max-width: 75%;
+    min-width: 50%;
+    height: auto;
+}
+
+.colDer { 
+    grid-area: 1 / 2 / 2 / 3; 
+    background-color: #ffffff;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.colDer__Text{
+    padding: 50px 50px;
+}
+.colDer__Text h2{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.form__Container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 50px;    
+}
+.form__Container form{
+    width: 100%;
+}
+
+.form__Container input {
+    margin: 10px 0;
+    width: 100%;
+    height: 40px;
+    border-radius: 3px;
+    border-width: 1px;
+    border-color: rgba(0, 0, 0, 0.251);
+    background-color: #F0F2FA;
+}
+
+#label{
+    height: 150px;    
+}
+
+.form__Container button{
+    width: 100%;
+    height: 40px;
+    margin: 30px 0;    
+    background-color: #59DF4E;
+    color: #ffffff;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+
+.overflowHidden{
+    overflow: hidden;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 575px) {    
+    .popup.open{
+        padding: 0 50px;
+    }
+   .grid__Form{
+    display: flex;
+    flex-direction: column;
+    overflow: auto;    
+   } 
+
+   .colIzq{
+    border-radius: 10px 10px 0 0;
+   }
+   .colIzq, .colDer{
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+   }
+   .colDer{
+    width: 100%;
+    border-radius: 0 0 10px 10px;
+   }
+
+   .colDer__Text{
+    width: 100%;
+    padding: 25px 0;
+   }
+
+   .colDer__Text h2{    
+    font-size: 1.5rem; 
+   }
+
+   .form__Container{
+    width: 100%;
+    padding: 0 10px;    
+   }
+
+   .form__Img{
+    padding: 20px;
+   }
+
+
+}
+
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .popup.open{
+        padding: 20px 75px;
+    }
+   .grid__Form{
+    display: flex;
+    flex-direction: column;
+    overflow: auto;    
+    margin: 0 35px 0 35px;
+   } 
+
+   .colIzq{
+    border-radius: 10px 10px 0 0;
+   }
+   .colIzq, .colDer{
+    width: 100%;
+   }
+
+   .colDer__Text{
+    width: 100%;
+    padding: 35px 10px;
+   }
+
+   .colDer__Text h2{    
+    font-size: 2.1rem; 
+   }
+
+   .form__Container{
+    width: 100%;
+    padding: 0 25px;    
+   }
+
+   .form__Img{
+    padding: 50px;
+   }
+}
+
+/* Media query para tabletas y dispositivos móviles medianos */
+@media (min-width: 768px) and (max-width: 991px) {
+    .popup.open{
+        padding: 20px 75px;
+    }
+    .grid__Form{    
+    overflow: auto;    
+    margin: 0 35px 0 35px;
+    } 
+    .colIzq{
+        border-radius: 0 0 0 10px;
+    }
+    .colDer{
+        border-radius: 0 0 10px 0;
+    }
+}
+
+/* Media query para laptops y tablets grandes */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .popup.open{
+        padding: 40px 100px;
+    }
+    .grid__Form{    
+    overflow: auto;    
+    margin: 0 45px 0 45px;
+    } 
+    .form__Img{        
+        padding: 0 50px;
+    }
+    .colIzq{
+        border-radius: 0 0 0 10px;
+    }
+    .colDer{
+        border-radius: 0 0 10px 0;
+    }
+}
+
+@media (min-width: 1200px) {
+    
+    .grid__Form{    
+    overflow: auto;    
+    margin: 0 45px 0 45px;
+    height: 100%;
+    } 
+    .form__Img{        
+        padding: 0 20px;
+        width: 100%;
+    }
+    img{        
+        width: 100%;
+    }
+    .colIzq{
+        border-radius: 0 0 0 10px;        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 400px;
+    }
+    .colDer{
+        border-radius: 0 0 10px 0;        
+        width: 400px;
+    }
+}
+
+
