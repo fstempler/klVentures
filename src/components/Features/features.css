@@ -534,7 +534,7 @@ width: 50%;
 /* empowering section */
 @media (min-width: 992px) and (max-width: 1199px) {
     .features__Container {
-        padding: 40px; 
+        padding: 10px; 
     }
 
     /* features footer */
@@ -548,7 +548,7 @@ width: 50%;
 /* empowering section */
 @media (min-width: 1200px) {
     .features__Container {
-        padding: 30px 350px; /* Cambiar el padding para pantallas de escritorio */
+        padding: 10px 350px; /* Cambiar el padding para pantallas de escritorio */
     }
 
     /* features footer */
